@@ -1,17 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App  from './components/app/app';
-import { BookstoreServiceProvider } from './components/bookstore-service-context/bookstoreServiceContext';
-import { ErrorBoundry } from './components/error-boundry/errorBoundry';
+import { BookstoreServiceProvider } from './components/bookstoreServiceContext/bookstoreServiceContext';
+import { ErrorBoundry } from './components/errorBoundry/errorBoundry';
 import BookstoreService from './services/bookstore-service';
-
+import './styles/globals.scss'
 import store from './store.js'
 
 const bookstoreService = new BookstoreService()
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <Provider store = {store}>
       <ErrorBoundry>

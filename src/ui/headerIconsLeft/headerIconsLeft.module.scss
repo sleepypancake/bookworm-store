@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.headerIconsLeft {
+    display: flex;
+    z-index: 1;
+
+    .headerIconsLeft__user {
+        svg {
+            display: block;
+        }
+    }
+    svg {
+        display: none;
+        margin: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+            path {
+                fill: $text-primary--hover
+            }
+        }
+
+        @media (min-width: $tablet) {
+            display: block;
+        }
+    }
+}

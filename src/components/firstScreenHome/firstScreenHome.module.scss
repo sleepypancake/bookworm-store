@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.firstScreen {
+    margin: 0 8px;
+    background-color: $white;
+    border-radius: 6px;
+
+    @media (min-width: $tablet){
+        margin: 24px;
+    }
+}

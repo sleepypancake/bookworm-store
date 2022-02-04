@@ -14,4 +14,8 @@ export default class BookstoreService {
             },
         ]
     }
+
+    sideMenu = 'open'
+
+
 }
