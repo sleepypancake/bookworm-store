@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+.button {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: fit-content;
+    font-size: 14px;
+
+    @media (min-width: $tablet) {
+        font-size: 16px;
+    }
+
+    &:after {
+        content: '';
+        display: none;
+        width: 100%;
+        height: 1px;
+        background: $text-black;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        animation: doBorder 0.7s;
+    }
+
+    &:hover:after {
+        display: block;
+    }
+}
+
+@keyframes doBorder {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

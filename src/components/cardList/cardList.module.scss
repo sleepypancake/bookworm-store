@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 8px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    @media (min-width: $tablet) {
+        padding: 24px 32px;
+        gap: 16px;
+        padding-bottom: 80px;
+    }
+}

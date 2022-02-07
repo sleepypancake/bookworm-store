@@ -40,6 +40,7 @@
         flex-direction: column;
         height: 100%;
         justify-content: space-between;
+        flex-grow: 1;
 
         .card__title, .card__price {
             margin-top: 0;
@@ -69,40 +70,6 @@
                 content: '$'
             }
         }
-
-        .card__btn {
-            background-color: transparent;
-            border: none;
-            text-transform: uppercase;
-            text-align: left;
-            padding: 0;
-            margin: 0;
-            cursor: pointer;
-            position: relative;
-            display: block;
-            width: 120px;
-            font-size: 14px;
-
-            @media (min-width: $tablet) {
-                font-size: 16px;
-            }
-
-            &:after {
-                content: '';
-                display: none;
-                width: 100%;
-                height: 1px;
-                background: $text-black;
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                animation: doBorder 0.7s;
-            }
-
-            &:hover:after {
-                display: block;
-            }
-        }
     }
 
     .card__pic {
@@ -114,11 +81,3 @@
     }
 }
 
-@keyframes doBorder {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from './sideMenu.module.scss'
 import cn from 'classnames'
-import { useOnClickOutside } from "../../../utils/Hooks/useOnCLickOutside";
 
 export const SideMenu = ({opens}) => {
     const [ menuOpens, setMenuOpens ] = useState(opens)

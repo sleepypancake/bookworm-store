@@ -5,6 +5,7 @@ import { CardPage } from '../pages/cardPage'
 import { HomePage }  from '../pages/homePage'
 import styles from './app.module.scss'
 import { withBookstoreService } from '../hoc/withBookstoreService'
+import { BasketPage } from '../pages/basketPage'
 
 
 const App = ({ bookstoreService }) => ( 
@@ -19,6 +20,11 @@ const App = ({ bookstoreService }) => (
             <Route 
                 path="/card"
                 element={<CardPage/>}
+                exact
+            />
+            <Route 
+                path="/basket"
+                element={<BasketPage/>}
                 exact
             />
         </Routes>

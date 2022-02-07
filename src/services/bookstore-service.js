@@ -49,7 +49,7 @@ export default class BookstoreService {
                 title: 'Pro JavaScript techniques',
                 author: 'John Resig',
                 price: 30,
-                pic: 'https://cdn1.ozone.ru/multimedia/1001214529.jpg'
+                pic: 'https://cdn1.ozone.ru/s3/multimedia-g/6037676932.jpg'
             },
             { 
                 id: 8,
@@ -58,10 +58,8 @@ export default class BookstoreService {
                 price: 30,
                 pic: 'https://refactoring.guru/images/patterns/book/web-cover-en.png?id=328861769fd11617674e'
             },
-        ]
+    ]
     }
-
-    sideMenu = 'close'
 
 
 }
