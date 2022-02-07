@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.list {
+    display: flex;
+    gap: 16px;
+    padding: 16px 8px;
+    overflow-x: scroll;
+
+    @media (min-width: $tablet) {
+        padding: 24px 32px;
+        gap: 30px;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+}

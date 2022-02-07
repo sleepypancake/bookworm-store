@@ -1,5 +1,43 @@
 @import '../../../styles/variables.scss';
 
-.sideMenu__wrapper {
-    
+.sideMenu {
+    display: none;
+
+    .sideMenu__wrapper {
+        background-color: $text-black;
+        opacity: 0.8;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+
+        
+    }
+
+    .sideMenu__menu {
+        width: 400px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $white;
+        z-index: 11;
+        animation: sideTransform 1.5s ;
+    }
+}
+
+.opens {
+    display: block;
+}
+
+@keyframes sideTransform {
+   from {
+       left: -100%
+   }
+
+   to {
+       left: 0;
+   }
 }

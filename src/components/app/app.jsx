@@ -9,7 +9,7 @@ import { withBookstoreService } from '../hoc/withBookstoreService'
 
 const App = ({ bookstoreService }) => ( 
     <div className={cn(styles.container, bookstoreService.sideMenu === 'open' && styles.container__noscroll)}>
-        <div className={cn(styles.container, bookstoreService.sideMenu === 'open' && styles.container__wrapper)}></div>     
+        <div className={cn(bookstoreService.sideMenu === 'open' && styles.container__wrapper)}></div>     
         <Routes>
             <Route 
                 path="/"
