@@ -1,41 +1,27 @@
-import React, { useEffect, useRef } from "react";
-import { withBookstoreService } from "../hoc/withBookstoreService";
-import { connect } from 'react-redux'
-import { booksLoaded } from '../../actions'
-import { compose } from "../../utils";
+import React from "react";
 import styles from './cardList.module.scss'
 import { CardListItem } from "./cardListItem/cardListItem";
 
-const CardList = ({ bookstoreService, booksLoaded, books }) => {
-    // const [ books, setBooks ] = useState([])
+export const CardList = ({ items, total, onIncrease, onDecrease, onDelete }) =>  {
 
-    useEffect(() => {
-        // setBooks(bookstoreService.getBooks())
-        const data = bookstoreService.getBooks()
-        booksLoaded(data)
-    }, [])
-    console.log(books)
     return (
-        <div className={styles.list} >
-            {books.map(item => (
-                <CardListItem
-                    key = {item.id}
-                    book = {item}
-                />
-            ))}
+        <div className={styles.wrapper}>
+            <div className={styles.list} >
+                {items.map(item => (
+                    <CardListItem
+                        key = {item.id}
+                        book = {item}
+                        onIncrease={() => onIncrease(item.id)}
+                        onDecrease={() => onDecrease(item.id)}
+                        onDelete={() => onDelete(item.id)}
+                    />
+                ))}
+            </div>
+            <div className={styles.payment}>
+                <span>Total: </span>
+                <span>${total}</span>
+            </div>
         </div>
     )
 }
     
-const mapStateToProps = ({ books }) => {
-    return { books }
-}
-
-const mapDispatchToProps = {
-    booksLoaded
-}
-
-export default compose(
-    withBookstoreService(),
-    connect(mapStateToProps, mapDispatchToProps)
-)(CardList);

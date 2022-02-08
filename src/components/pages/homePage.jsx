@@ -1,5 +1,5 @@
 import React from 'react';
-import  BookList  from '../bookList/bookList'
+import  BookListContainer  from '../bookList/bookListContainer'
 import { FirstScreenHome } from '../firstScreenHome/firstScreenHome';
 
 export const HomePage = () => {
@@ -7,7 +7,7 @@ export const HomePage = () => {
     return (
         <div>
             <FirstScreenHome />
-            <BookList/>
+            <BookListContainer/>
         </div>
     )
 }

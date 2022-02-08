@@ -1,10 +1,10 @@
 import React from 'react';
-import CardList from '../cardList/cardList';
+import CardListComponent from '../cardList/cardListComponent';
 import { FirstScreenHome } from '../firstScreenHome/firstScreenHome';
 
 export const BasketPage = () => (
     <div>
         <FirstScreenHome/>
-        <CardList />
+        <CardListComponent />
     </div>
 )

@@ -24,4 +24,19 @@
             display: block;
         }
     }
+
+    .headerIconsLeft__basket {
+        position: relative;
+
+        .basketCounter {
+            background: $text-black;
+            padding: 0 5px;
+            border-radius: 50%;
+            font-size: 10px;
+            color: $white;
+            position: absolute;
+            top: -7px;
+            right: 0;
+        }
+    }
 }

@@ -1,7 +1,5 @@
 export default class BookstoreService {
-
-    getBooks() {
-        return [
+    data =  [
             { 
                 id: 1,
                 title: 'Production-Ready Microservices',
@@ -58,8 +56,17 @@ export default class BookstoreService {
                 price: 30,
                 pic: 'https://refactoring.guru/images/patterns/book/web-cover-en.png?id=328861769fd11617674e'
             },
-    ]
+    ];
+
+    getBooks() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(this.data)
+                reject(new Error('something bad happened'))
+            }, 700)
+        })
     }
+    
 
 
 }
